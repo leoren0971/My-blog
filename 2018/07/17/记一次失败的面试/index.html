@@ -1,0 +1,82 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.8.0"><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author" content="leoren0971"><title>记一次失败的面试 · leoren0971的博客</title><meta name="description" content="第一家H姓公司先做了一套面试题，题目看似比较基础但又不失刁钻，比叫考验基本功，做了题才发现自己是问啥啥不会，就连基本的number和string的运算原则都忘记了，内心真的感觉很丢人。上题目：
+1. 输出表达式：-1+-1+&amp;quot;2&amp;quot;+&amp;quot;2&amp;quot; +1-+&amp;quot;"><meta name="keywords"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="short icon" href="/images/favicon.png" type="image/x-icon"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/blog_basic.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"></head><body><div class="sidebar animated fadeInDown"><div class="logo-title"><div class="title"><img src="/images/logo@2x.png" style="width:127px;"><h3 title><a href="/">leoren0971的博客</a></h3></div></div><ul class="social-links"></ul><div class="footer"><a target="_blank" href="/"><span>Theme by </span></a><a href="https://www.caicai.me"> CaiCai </a><span>&</span><a href="https://github.com/Ben02/hexo-theme-Anatole"> Ben</a><div class="by_farbox"><a href="https://hexo.io/zh-cn/" target="_blank">Proudly published with Hexo&#65281;</a></div></div></div><div class="main"><div class="page-top animated fadeInDown"><div class="nav"><li><a href="/">首页</a></li><li><a href="/about">关于</a></li><li><a href="/archives">归档</a></li><li><a href="/links">友链</a></li></div><div class="information"><div class="back_btn"><li><a class="fa fa-chevron-left" onclick="window.history.go(-1)"> </a></li></div><div class="avatar"><img></div></div></div><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post animated fadeInDown"><div class="post-title"><h3><a>记一次失败的面试</a></h3></div><div class="post-content"><h3 id="第一家H姓公司"><a href="#第一家H姓公司" class="headerlink" title="第一家H姓公司"></a>第一家H姓公司</h3><p>先做了一套面试题，题目看似比较基础但又不失刁钻，比叫考验基本功，做了题才发现自己是问啥啥不会，就连基本的number和string的运算原则都忘记了，内心真的感觉很丢人。<br>上题目：</p>
+<h2 id="1-输出表达式：-1-1-quot-2-quot-quot-2-quot-1-quot-2-quot-quot-2-quot-的结果"><a href="#1-输出表达式：-1-1-quot-2-quot-quot-2-quot-1-quot-2-quot-quot-2-quot-的结果" class="headerlink" title="1. 输出表达式：-1+-1+&quot;2&quot;+&quot;2&quot; +1-+&quot;2&quot;+&quot;2&quot; 的结果"></a>1. 输出表达式：<code>-1+-1+&quot;2&quot;+&quot;2&quot;</code> <code>+1-+&quot;2&quot;+&quot;2&quot;</code> 的结果</h2><p>这道题考的是基本数据类型number和string的运算原则，数字字符串与number数字做加操作结果都是字符串类型，与自己或number数字做减操作结果都是number类型。</p>
+<h2 id="2-JavaScript中的类型转换是怎样的？"><a href="#2-JavaScript中的类型转换是怎样的？" class="headerlink" title="2. JavaScript中的类型转换是怎样的？"></a>2. JavaScript中的类型转换是怎样的？</h2><p>要知道JavaScript中的数据类型之间是怎么转换的，就先来复习一下JavaScript中的数据类型。</p>
+<h3 id="JavaScript中的数据类型"><a href="#JavaScript中的数据类型" class="headerlink" title="JavaScript中的数据类型"></a>JavaScript中的数据类型</h3><p>在JavaScript中有五种数据类型：</p>
+<ul>
+<li>string</li>
+<li>number</li>
+<li>boolean</li>
+<li>object</li>
+<li>function</li>
+</ul>
+<p>还有三种对象类型：</p>
+<ul>
+<li>Object</li>
+<li>Date</li>
+<li>Array</li>
+</ul>
+<p>两个不包含任何值的数据类：</p>
+<ul>
+<li>null</li>
+<li>undefined</li>
+</ul>
+<h3 id="typeof-操作符"><a href="#typeof-操作符" class="headerlink" title="typeof 操作符"></a>typeof 操作符</h3><p>使用typeof操作符可以来查看变量的数据类型。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">typeof null        // object</span><br><span class="line">typeof 22          // number</span><br><span class="line">typeof &apos;gg&apos;        // string</span><br><span class="line">typeof [0, 0, 0]   // object</span><br><span class="line">typeof new Date()  // object</span><br><span class="line">typeof true        // boolean</span><br><span class="line">typeof NaN         // number</span><br><span class="line">typeof myLuck      // undefined</span><br></pre></td></tr></table></figure>
+<p>注意：</p>
+<ul>
+<li>NaN 的数据类型是number</li>
+<li>数组（Array）的数据类型是object</li>
+<li>日期的数据类型是object</li>
+<li>null 的数据类型是object</li>
+<li>未定义的变量的数据类型是undefined</li>
+</ul>
+<p>所以仅仅用typeof来进行变量类型的判断是远远不够的。</p>
+<h3 id="constructor-属性"><a href="#constructor-属性" class="headerlink" title="constructor 属性"></a>constructor 属性</h3><p>constructor属性返回所有JavaScript变量的构造函数。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&apos;gg&apos;.constructor                 // ƒ String() &#123; [native code] &#125;</span><br><span class="line">(666).constructor                // ƒ Number() &#123; [native code] &#125;</span><br><span class="line">[6, 6, 6].constructor            // ƒ Array() &#123; [native code] &#125;</span><br><span class="line">true.constructor                 // ƒ Boolean() &#123; [native code] &#125;</span><br><span class="line">new Object().constructor         // ƒ Object() &#123; [native code] &#125;</span><br><span class="line">new Date().constructor           // ƒ Date() &#123; [native code] &#125;</span><br><span class="line">(function aaa() &#123;&#125;).constructor  // ƒ Function() &#123; [native code] &#125;</span><br></pre></td></tr></table></figure>
+<p>是不是发现了新大陆，所有类型感觉都可以一网打尽了，绝不错杀一个，嘿嘿嘿！<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">let arr = [0, 1, 2, 3, 4, 5];</span><br><span class="line">if (arr.constructor.toString().indexOf(&apos;Array&apos;) &gt; -1) &#123;</span><br><span class="line">  // 是数组错不了了</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">let date = new Date();</span><br><span class="line">if (date.constructor.toString().indexOf(&apos;Array&apos;) &gt; -1) &#123;</span><br><span class="line">  // 是Date没跑了</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="JavaScript-类型转换"><a href="#JavaScript-类型转换" class="headerlink" title="JavaScript 类型转换"></a>JavaScript 类型转换</h3><p>JavaScript变量可以转换为新变量或者其它数据类型：</p>
+<ul>
+<li>通过使用JavaScript函数</li>
+<li>通过JavaScript自身自动转换</li>
+</ul>
+<h4 id="数字转换为字符串"><a href="#数字转换为字符串" class="headerlink" title="数字转换为字符串"></a>数字转换为字符串</h4><p>全局方法String可以将数字、布尔值、日期、转换为字符串。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">String(123);         // 将数字123转换为123的字符</span><br><span class="line">String(123 + 100);   // 将表达式的结果转换为字符串</span><br><span class="line">String(true);        // 将true转换为字符串的&apos;true&apos;</span><br><span class="line">String(new Date());  // 返回&quot;Thu Nov 01 2018 23:11:05 GMT+0800 (中国标准时间)&quot;</span><br></pre></td></tr></table></figure></p>
+<h4 id="将字符串转换为数字"><a href="#将字符串转换为数字" class="headerlink" title="将字符串转换为数字"></a>将字符串转换为数字</h4><p>全局方法Number() 可以将字符串转换为数字<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Number(&apos;666&apos;);     // 返回 666</span><br><span class="line">Number(&apos;z&apos;);       // 返回 NaN</span><br><span class="line">Number(&apos;66.66&apos;);   // 返回 66.66</span><br></pre></td></tr></table></figure></p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>paseFloat()</td>
+<td style="text-align:center">解析一个字符串，并返回一个浮点数</td>
+</tr>
+<tr>
+<td>paseInit</td>
+<td style="text-align:center">解析一个字符串，返回一个整数</td>
+</tr>
+</tbody>
+</table>
+<h4 id="自动转换类型"><a href="#自动转换类型" class="headerlink" title="自动转换类型"></a>自动转换类型</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">3 + &apos;1&apos;  // 返回 &apos;31&apos;    3由number自动转换为&apos;3&apos;string</span><br><span class="line">&apos;5&apos; - 1  // 返回 4       &apos;5&apos;由string自动转换为5number</span><br><span class="line">&apos;5&apos; * 3  // 返回 15      &apos;5&apos;由string自动转换为5number</span><br></pre></td></tr></table></figure>
+<p>一元运算符 + 在与字符串运算时会把number转换为string<br>-、*、/ 字符串与数字运算时会将string转换为number再进行运算</p>
+<h2 id="3-Javascript作用域是怎样的？"><a href="#3-Javascript作用域是怎样的？" class="headerlink" title="3. Javascript作用域是怎样的？"></a>3. Javascript作用域是怎样的？</h2><p>在JavaScript中每个函数内部的一系列变量和访问变量的规则统称为作用域。多作用域可以嵌套，外部作用域访问不了内部作用域的变量，只能从内部访问外部作用域的变量。而且同一个作用域中变量名必须唯一。</p>
+<h2 id="4-解释JavaScript中的相等判断"><a href="#4-解释JavaScript中的相等判断" class="headerlink" title="4. 解释JavaScript中的相等判断"></a>4. 解释JavaScript中的相等判断</h2><p>判断两个变量是否相等时，有两种比较符号：</p>
+<ul>
+<li>全等于 (===): 判断变量的值和他的类型</li>
+<li>等于 (==): 只判断变量的值</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">0 == false   // true</span><br><span class="line">0 === false  // false 虽然都表示否，但类型不同</span><br><span class="line">1 == &apos;1&apos;     // true</span><br><span class="line">1 === &apos;1&apos;    // false 虽然都是1， 但一个是number，一个是string</span><br></pre></td></tr></table></figure>
+<h2 id="5-回调函数是什么？"><a href="#5-回调函数是什么？" class="headerlink" title="5. 回调函数是什么？"></a>5. 回调函数是什么？</h2><p>简单来说，就是把一个函数当做参数传入正在调用的函数中，并在当前函数体内执行传入的参数函数。这个过程在JavaScript中也叫作闭包，因为传入的回调函数内部可以访问到当前函数内部的作用域，而且在回调函数未执行之前一直会占用内存，直到回调函数执行后才会销毁这部分内存。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">function myCallback(data) &#123;</span><br><span class="line">  let value = 666;</span><br><span class="line">  console.log(value + data);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function MyFun(callback) &#123;</span><br><span class="line">  console.log(&apos;666&apos;);</span><br><span class="line">  callback(233);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">MyFun(myCallback);</span><br><span class="line">// 666</span><br><span class="line">// 899</span><br></pre></td></tr></table></figure>
+<h2 id="6-“use-strict”-的作用"><a href="#6-“use-strict”-的作用" class="headerlink" title="6. “use strict” 的作用"></a>6. “use strict” 的作用</h2><p>“use strict” 是放在js文件第一行来进行声明当前js的执行环境使用严格模式，在严格模式下，必须按照严格模式个要求编写js代码，否则运行时就会抛出错误。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">// 比如在严格模式下必须使用变量声明符来声明变量</span><br><span class="line">a = 111; // 错误，在严格模式下会报错</span><br><span class="line">var a = 111; // 正确</span><br></pre></td></tr></table></figure>
+<h2 id="7-null-和undefined-的区别"><a href="#7-null-和undefined-的区别" class="headerlink" title="7. null 和undefined 的区别"></a>7. null 和undefined 的区别</h2><p>null表示一个空的对象指针，undefined则表示变量未定义初始值</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="http://www.runoob.com/js/js-type-conversion.html" target="_blank" rel="noopener">菜鸟教程</a></li>
+<li><a href="https://juejin.im/post/5bd95d22e51d45685f442f73" target="_blank" rel="noopener">26个精选的JavaScript面试问题</a></li>
+<li><a href="https://mp.weixin.qq.com/s?__biz=MzU3NjczNDk2MA==&amp;mid=2247483653&amp;idx=1&amp;sn=80f380339e976b64eb82abaabcf4cb8e&amp;chksm=fd0e129aca799b8c26b19dca4bbb425652b0678d994bf2ca957038fe3b65a4a576154a0f9ffb&amp;mpshare=1&amp;scene=23&amp;srcid=1020WvMfZScFBZdJlKQp7O9X#rd" target="_blank" rel="noopener">2018大厂高级前端面试题汇总</a></li>
+</ul>
+</div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2018-07-17</span><i class="fa fa-tag"></i><a class="tag" href="/tags/面试/" title="面试">面试 </a></div></div></div></div><div class="share"><div class="evernote"><a class="fa fa-bookmark" href="javascript:(function(){EN_CLIP_HOST='http://www.evernote.com';try{var%20x=document.createElement('SCRIPT');x.type='text/javascript';x.src=EN_CLIP_HOST+'/public/bookmarkClipper.js?'+(new%20Date().getTime()/100000);document.getElementsByTagName('head')[0].appendChild(x);}catch(e){location.href=EN_CLIP_HOST+'/clip.action?url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title);}})();" ref="nofollow" target="_blank"></a></div><div class="weibo"><a class="fa fa-weibo" href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://service.weibo.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&amp;title=',e(d.title),'&amp;appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));"></a></div><div class="twitter"><a class="fa fa-twitter" href="http://twitter.com/home?status=,https://leoren0971.github.io/2018/07/17/记一次失败的面试/,leoren0971的博客,记一次失败的面试,;"></a></div></div><div class="pagination"><ul class="clearfix"><li class="pre pagbuttons"><a class="btn" role="navigation" href="/2018/08/08/GitHub访问太慢，用host解救/" title="GitHub访问太慢，用host解救">上一篇</a></li></ul></div></div></div></div></div><script src="/js/jquery.js"></script><script src="/js/jquery-migrate-1.2.1.min.js"></script><script src="/js/jquery.appear.js"></script></body></html>
